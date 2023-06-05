@@ -1,6 +1,23 @@
 {% extends "layouts/base.html" %} {% block content %}
-<article>
-  <h1>{{ title }}</h1>
-  {{ content | safe }}
+<article class="intro">
+  <div class="intro__header | radius frame">
+    <h1 class="intro__heading | weight-normal text-400 md:text-600">
+      {{ intro.eyebrow }}
+    </h1>
+    <em class="text-800 md:text-900 lg:text-major weight-bold"
+      >{{ intro.main }}</em
+    >
+    <div class="intro__content | flow">
+      <p class="intro__summary">{{ intro.summary }}</p>
+      <a href="{{ intro.buttonUrl }}" class="button">{{ intro.buttonText }}</a>
+    </div>
+    <div class="intro__media | redius dot-shadow">
+      <img
+        src="{{ intro.image }}"
+        alt="{{ intro.imageAlt }}"
+        class="intor__image | radius"
+      />
+    </div>
+  </div>
 </article>
 {% endblock %}
