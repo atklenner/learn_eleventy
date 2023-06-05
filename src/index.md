@@ -8,7 +8,7 @@ intro:
     buttonText: "See our work"
     buttonUrl: "/work"
     image: "/images/bg/toast.jpg"
-    imageAlt: "Buttered toasted white break"
+    imageAlt: "Buttered toasted white bread"
 ---
 
 This is pretty _rad_, right?
