@@ -5,13 +5,14 @@
   "main": ".eleventy.js",
   "scripts": {
     "start": "npx eleventy --serve",
-    "lint" : "djlint ./src/_includes/**/*.njk --reformat --lint --indent 2"
+    "lint": "djlint ./src/_includes/**/*.njk --reformat --lint --indent 2"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-fetch": "^4.0.0"
+    "@11ty/eleventy-fetch": "^4.0.0",
+    "@11ty/eleventy-plugin-rss": "^1.2.0"
   }
 }

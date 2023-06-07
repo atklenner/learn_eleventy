@@ -1,6 +1,7 @@
 const sortByDisplayOrder = require("./src/utils/sort-by-display-order.js");
 const dateFilter = require("./src/filters/date-filter.js");
 const w3dateFilter = require("./src/filters/w3-date-filter.js");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = (config) => {
   config.addPassthroughCopy("./src/images");
@@ -26,6 +27,8 @@ module.exports = (config) => {
 
   config.addFilter("dateFilter", dateFilter);
   config.addFilter("w3DateFilter", w3dateFilter);
+
+  config.addPlugin(pluginRss);
 
   return {
     markdownTemplateEngine: "njk",
