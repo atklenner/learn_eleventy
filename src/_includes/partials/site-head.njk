@@ -11,7 +11,12 @@
           <li>
             <a
               href="{{ item.url }}"
-              {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+              {{
+              helpers.getLinkActiveState(item.url,
+              page.url)
+              |
+              safe
+              }}
             >
               {{ item.text }}
             </a>
