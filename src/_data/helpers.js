@@ -35,4 +35,7 @@ module.exports = {
 
     return filteredItems;
   },
+  filterCollectionByKeys(collection, keys) {
+    return collection.filter((x) => keys.includes(x.data.key));
+  },
 };
