@@ -5,7 +5,7 @@
   "main": ".eleventy.js",
   "scripts": {
     "start": "npx eleventy --serve",
-    "lint" : "djlint ./src/_includes/**/*.njk --reformat"
+    "lint" : "djlint ./src/_includes/**/*.njk --reformat --lint --indent 2"
   },
   "keywords": [],
   "author": "",
