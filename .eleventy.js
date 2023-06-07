@@ -18,6 +18,11 @@ module.exports = (config) => {
   config.addCollection("blog", (collection) => {
     return [...collection.getFilteredByGlob("./src/posts/*.md")].reverse();
   });
+  config.addCollection("people", (collection) => {
+    return collection.getFilteredByGlob("./src/people/*.md").sort((a, b) => {
+      return Number(a.fileSlug) > Number(b.fileSlug) ? 1 : -1;
+    });
+  });
 
   config.addFilter("dateFilter", dateFilter);
   config.addFilter("w3DateFilter", w3dateFilter);
