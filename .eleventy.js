@@ -13,7 +13,9 @@ const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 
 module.exports = (config) => {
-  config.addPassthroughCopy("./src/images");
+  ["./src/images", "./src/fonts"].forEach((path) => {
+    config.addPassthroughCopy(path);
+  });
 
   config.addCollection("work", (collection) => {
     return sortByDisplayOrder(collection.getFilteredByGlob("./src/work/*.md"));
