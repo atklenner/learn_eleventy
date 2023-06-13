@@ -5,6 +5,8 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 const htmlMin = require("html-minifier-terser");
 
+const imageShortcodePlaceholder = require("./image.js");
+
 const postcss = require("postcss");
 const postcssImport = require("postcss-import");
 const postcssImportExtGlob = require("postcss-import-ext-glob");
@@ -38,6 +40,11 @@ module.exports = (config) => {
 
   config.addFilter("dateFilter", dateFilter);
   config.addFilter("w3DateFilter", w3dateFilter);
+
+  config.addNunjucksAsyncShortcode(
+    "imagePlaceholder",
+    imageShortcodePlaceholder
+  );
 
   config.addPlugin(pluginRss);
 

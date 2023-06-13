@@ -7,7 +7,7 @@ intro:
   summary: "Let us help you create the perfect campaign with our multi-faceted team of talented creatives."
   buttonText: "See our work"
   buttonUrl: "/work"
-  image: "/images/bg/toast.jpg"
+  image: "./src/images/bg/toast.jpg"
   imageAlt: "Buttered toasted white bread"
 primaryCTA:
   title: "This is an agency that doesn't actually exist"

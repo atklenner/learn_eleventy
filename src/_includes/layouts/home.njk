@@ -12,9 +12,7 @@
           }}</a>
         </div>
         <div class="intro__media | redius dot-shadow">
-          <img src="{{ intro.image }}"
-               alt="{{ intro.imageAlt }}"
-               class="intro__image | radius" />
+          {% imagePlaceholder intro.image, intro.imageAlt %}
         </div>
       </div>
     </article>

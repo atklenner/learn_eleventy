@@ -10,10 +10,7 @@
          aria-label="See {{ item.data.title }}"
          class="featured-work__item | frame"
          data-frame="quaternary">
-        <img src="{{ item.data.hero.image }}"
-             alt="{{ item.data.hero.imageAlt }}"
-             loading="lazy"
-             class="radius" />
+         {% imagePlaceholder item.data.hero.image, item.data.hero.imageAlt %}
       </a>
     {% endfor %}
   </div>
